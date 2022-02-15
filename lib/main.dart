@@ -1,3 +1,6 @@
+import 'package:ems/screens/homeScreen.dart';
+import 'package:ems/screens/login.dart';
+import 'package:ems/screens/splashScreens.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,11 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      
+      home: const SplashScreen(),
+      routes: {'home': (context) => const LoginScreen()},
     );
   }
 }
